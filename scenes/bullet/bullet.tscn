@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://2a0efo77ox6s"]
+
+[ext_resource type="Script" uid="uid://jw1llrlxu263" path="res://scenes/bullet/bullet.gd" id="1_7c8un"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_eyi85"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eyi85"]
+size = Vector2(4, 26)
+
+[node name="Bullet" type="Area2D"]
+script = ExtResource("1_7c8un")
+speed = 2000
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(8.9407e-08, -2.38419e-07)
+scale = Vector2(4, 26)
+texture = SubResource("CanvasTexture_eyi85")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_eyi85")
+
+[node name="AutoDestroyTimer" type="Timer" parent="."]
+wait_time = 3.0
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="AutoDestroyTimer" to="." method="_on_auto_destroy_timer_timeout"]

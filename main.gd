@@ -1,11 +1,14 @@
 extends Node2D
 
 signal enemy_created
+
 var enemy_scene: PackedScene = preload("res://scenes/enemy/enemy.tscn")
+var bullet_scene: PackedScene = preload("res://scenes/bullet/bullet.tscn")
 var enemies: int = 0
 
+
 func _ready() -> void:
-	$Timer.start()
+	$EnemiesCreation.start()
 
 # criação de inimigos
 func _on_timer_timeout() -> void:
@@ -21,8 +24,13 @@ func _on_timer_timeout() -> void:
 	$EnemyContainer.add_child(enemy)
 	enemies += 1
 	enemy_created.emit()
-	print("Inimigo criado em: ", enemy.position)
-
 
 func _on_enemy_created() -> void:
 	$Ui/EnemyCounter/MarginContainer/Label.text = "Enemies created: " + str(enemies)
+
+# disparos
+func _on_player_shoot(pos: Variant, dir: Variant) -> void:
+	var bullet = bullet_scene.instantiate()
+	bullet.direction = dir
+	bullet.position = pos
+	$Projectiles.add_child(bullet)

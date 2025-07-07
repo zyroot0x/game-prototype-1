@@ -7,7 +7,7 @@
 [node name="Main" type="Node2D"]
 script = ExtResource("1_iuonh")
 
-[node name="Enemy" type="Node2D" parent="."]
+[node name="EnemyContainer" type="Node2D" parent="."]
 
 [node name="Player" parent="." instance=ExtResource("2_k2fmo")]
 position = Vector2(587, 330)
@@ -16,7 +16,10 @@ position = Vector2(587, 330)
 zoom = Vector2(0.5, 0.5)
 
 [node name="Timer" type="Timer" parent="."]
+<<<<<<< HEAD
 wait_time = 5.0
+=======
+>>>>>>> 5eaa41b (fix enemy counter text and improve spawn randomness)
 
 [node name="Ui" parent="." instance=ExtResource("3_k2fmo")]
 

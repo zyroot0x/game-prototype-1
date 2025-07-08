@@ -1,6 +1,9 @@
-[gd_scene format=3 uid="uid://bbwi0fyunxp0w"]
+[gd_scene load_steps=2 format=3 uid="uid://bbwi0fyunxp0w"]
+
+[ext_resource type="Script" uid="uid://c4yld68whsq3" path="res://scenes/globals/UI/ui_manager.gd" id="1_u7n8c"]
 
 [node name="Ui" type="CanvasLayer"]
+script = ExtResource("1_u7n8c")
 
 [node name="EnemyCounter" type="Control" parent="."]
 layout_mode = 3
@@ -21,5 +24,5 @@ grow_vertical = 2
 
 [node name="Label" type="Label" parent="EnemyCounter/MarginContainer"]
 layout_mode = 2
-text = "Enemies created:"
+text = "Enemies created: 0"
 vertical_alignment = 1

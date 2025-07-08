@@ -15,6 +15,12 @@ run/main_scene="uid://f83um7r4mw67"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+EnemyManager="*res://scenes/globals/EnemyManager/enemy_manager.gd"
+ProjectileManager="*res://scenes/globals/ProjectileManager/projectile_manager.gd"
+UI="*res://scenes/globals/UI/ui.tscn"
+
 [input]
 
 move_up={

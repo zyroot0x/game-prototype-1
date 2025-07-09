@@ -1,17 +1,23 @@
 # Game Prototype 1
 
-🎮 Arena 2D top-down para jogar com amigos, com inimigos que aparecem em ondas e sistema básico de combate.
+🎮 Protótipo de arena 2D top-down feito na Godot, com foco em combate simples e spawn contínuo de inimigos.
 
-## Features planejadas
-- Movimento do jogador
-- Tiro e colisão com inimigos
-- Spawner de inimigos em loop
-- Contador de pontuação
-- Barra de vida
+## ✅ Funcionalidades já implementadas
+- Movimento do jogador com teclado
+- Tiro em direção ao mouse com cooldown
+- Inimigos que seguem o jogador e têm barra de vida
+- Spawner automático de inimigos
+- Contador de inimigos vivos
 
-## Feito com
+## 🧪 Próximas funcionalidades (em desenvolvimento)
+- Sistema de pontuação
+- Melhor IA dos inimigos
+- Multiplayer local ou online (em estudo)
+
+## ⚙️ Tecnologias
 - Godot Engine 4
 - GDScript
 
-## Desenvolvedor
-[zyroot0x](https://github.com/zyroot0x)
+## 👤 Desenvolvedor
+**zyroot0x**  
+[GitHub](https://github.com/zyroot0x)
